@@ -135,6 +135,6 @@ then, if you're having trouble, don't hesitate to call Alex.
 
 Good luck!
 
-Please reach out to Alex at [+61 467 883 944](telto:+61 467 883 944)
+Please reach out to Alex at [telto:+61 467 883 944](+61 467 883 944)
 if something happens, you need help, or you are unable to complete the
 challenge due to an unforeseen event.

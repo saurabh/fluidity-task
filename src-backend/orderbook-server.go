@@ -7,7 +7,7 @@ const (
 	TradeInterval = 1 * time.Millisecond
 
 	// OrderbookMaxSize to contain before starting to overwrite the state
-	OrderbookMaxSize = 1024
+	OrderbookMaxSize = 500
 )
 
 const (
