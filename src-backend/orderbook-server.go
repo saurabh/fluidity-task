@@ -1,9 +1,6 @@
 package main
 
-import (
-	"time"
-	"log"
-)
+import "time"
 
 const (
 	// TradeInterval between sending out a new trade that should be processed
@@ -134,7 +131,7 @@ func (server OrderbookServer) Run() {
 
 			trades[counter] = trade
 
-			for cookie, connected := range connected {
+			for _, connected := range connected {
 
 				// if the channel cannot be read at the time, we skip it
 
