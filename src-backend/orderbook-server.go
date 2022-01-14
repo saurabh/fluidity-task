@@ -4,7 +4,7 @@ import "time"
 
 const (
 	// TradeInterval between sending out a new trade that should be processed
-	TradeInterval = 1 * time.Millisecond
+	TradeInterval = 5 * time.Second
 
 	// OrderbookMaxSize to contain before starting to overwrite the state
 	OrderbookMaxSize = 500
