@@ -9,6 +9,8 @@ import (
 func handleOrderbook(orderbookMessages chan<- OrderbookRequest) func(http.ResponseWriter, *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 
+		headerSetCors(w)
+
 		updates := make(chan []OrderbookUpdate)
 
 		orderbookMessages <- OrderbookRequest{

@@ -3,6 +3,7 @@ package main
 import (
 	"math/rand"
 	"fmt"
+	"net/http"
 )
 
 func generateCookie() string {
@@ -38,4 +39,8 @@ func generateFakeTrade() OrderbookUpdate {
 	}
 
 	return orderbookUpdate
+}
+
+func headerSetCors(w http.ResponseWriter) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 }

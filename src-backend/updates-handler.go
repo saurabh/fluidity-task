@@ -1,17 +1,24 @@
 package main
 
 import (
-	"net/http"
 	"log"
+	"net/http"
 
 	"github.com/gorilla/websocket"
 )
 
-var websocketUpgrader websocket.Upgrader
+var websocketUpgrader = websocket.Upgrader{
+	CheckOrigin: func(r *http.Request) bool {
+		return true
+	},
+}
 
 func handleUpdates(orderbookServer chan<- OrderbookRequest) func(http.ResponseWriter, *http.Request) {
 
 	return func(w http.ResponseWriter, r *http.Request) {
+
+		headerSetCors(w)
+
 		conn, err := websocketUpgrader.Upgrade(w, r, nil)
 
 		if err != nil {
@@ -36,7 +43,6 @@ func handleUpdates(orderbookServer chan<- OrderbookRequest) func(http.ResponseWr
 		}
 
 		cookie := <-orderbookCookie
-
 
 		defer conn.Close()
 
