@@ -18,6 +18,8 @@ to specific problems.*
 
 *Please fork this repo to get started!*
 
+**Please keep the repo private!**
+
 ## Background
 
 This repo contains the backend that should be coupled with your
