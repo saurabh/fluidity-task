@@ -71,11 +71,11 @@ data for the first time that you load the application.
 
 ## API provided by the backend codebase
 
-### Get the last 250 fake orders
+### Get up to 250 fake orders
 
-	/api/last-orders
+	/api/orderbook
 
-This API endpoint will grab the latest 250 fake orders that were made
+This API endpoint will grab up to 250 fake orders that were made
 along with their side. This is useful in initially constructing
 the orderbook!
 
