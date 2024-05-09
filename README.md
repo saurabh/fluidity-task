@@ -4,12 +4,11 @@
 Thank you for applying for a frontend role with Fluidity Money!
 
 In this task to test your Typescript React capabilities, you are expected
-to create a webapp with functionality similar to the following over
-a weekend:
+to create a webapp with functionality similar to the following:
 
 ![Example image](mock.png)
 
-You must use Typescript and React to implement your solution for this
+You must use Typescript and Next JS to implement your solution for this
 task. You may use as many tools as you are comfortable with that don't
 detract from an honest skills assessment.
 
