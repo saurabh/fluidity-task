@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { redirect } from "next/navigation";
-import Orderbook from "./orderbook/orderbook";
+import OrderbookAndCharts from "./home";
 import { fetchOrderBook } from '@/api';
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default async function Home() {
     return (
       <HydrationBoundary state={dehydrate(queryClient)}>
         <main className="flex min-h-screen items-center justify-center p-24">
-          <Orderbook />
+          <OrderbookAndCharts />
         </main>
       </HydrationBoundary>
     );

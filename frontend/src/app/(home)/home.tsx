@@ -7,10 +7,10 @@ import { Table, TableHeader, TableRow, TableHead } from "@/components/ui/table";
 import OrderbookTable from "./orderbook-table";
 import { aggregateData } from "@/utils/aggregateOrderbookData";
 import { orderbookReducer } from "@/utils/orderbookReducer";
-import { DepthChart } from "../d3-charts/depth-chart";
-import { PriceChart } from "../d3-charts/price-chart";
+import { DepthChart } from "./d3-charts/depth-chart";
+import { PriceChart } from "./d3-charts/price-chart";
 
-export default function Orderbook() {
+export default function OrderbookAndCharts() {
     const { data: orderbookData, isLoading, isRefetching } = useOrderbook();
     const { data: wsData } = useWebSocket();
     const [state, dispatch] = useReducer(orderbookReducer, { bids: [], asks: [], sales: []});
