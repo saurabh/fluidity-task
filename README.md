@@ -1,3 +1,7 @@
+# Task notes
+
+Hey Alex! The app is built with Next, Tanstack, Tailwind, Radix-ui, and D3 for charts. Was my first time using d3 so spent a bit figuring that out and also a bit processing the api data to sales. The .env is there so should be fairly simple to run the app. Looking forward to hearing back!
+
 
 # Frontend Hiring Task
 
