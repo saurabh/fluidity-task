@@ -1,10 +1,10 @@
-export interface OrderbookItem {
+export interface ApiResponse {
     side: 'bid' | 'ask';
     price: number;
     amount: number;
 }
 
-export const fetchOrderBook = async (): Promise<OrderbookItem[]> => {
+export const fetchOrderBook = async (): Promise<ApiResponse[]> => {
     try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orderbook`);
         if (!response.ok) {
